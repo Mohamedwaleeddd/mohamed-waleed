@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="خلفيات اسلامية|موقع اسلامي ويب">
+    <title>تحميل خلفيات اسلامية</title>
+    <style>
+      img{
+        height: 900px;
+        width: 500px;
+        margin-left: 200px;
+        cursor: pointer;
+      }
+      h1{
+        margin-left: 250px;
+        border-bottom: 3px black solid;
+        width: 370px;
+        font-size: 60px;
+      }
+      body{
+        height: 5000px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>خلفيات اسلامية</h1>
+    <div id="wallpaper-container">
+      <img src="wallpaper.jpg" onclick="downloadImage(this)">
+      <br>
+      <br>
+     <img src="wallpaper2.jpg" onclick="downloadImage(this)">
+     <br>
+     <br>
+     <img src="wallpaper3.jpg" onclick="downloadImage(this)">
+     <br>
+     <br>
+     <img src="wallpaper4.jpg" onclick="downloadImage(this)">
+     <br>
+     <br>
+     <img src="wallpaper5.jpg" onclick="downloadImage(this)">
+     <br>
+     <br>
+     <img src="wallpaper6.jpg" onclick="downloadImage(this)">
+    </div>
+    <script>
+    window.alert("اضغط علي الخلفية لتحميلها");
+      function downloadImage(image) {
+        var imageURL = image.src;
+        var link = document.createElement("a");
+        link.href = imageURL;
+        link.download = imageURL.substring(imageURL.lastIndexOf("/") + 1);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+  </body>
+</html>
